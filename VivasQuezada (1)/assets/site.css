@@ -296,6 +296,7 @@ body {
   color: var(--ink-soft);
   transition: color 0.2s ease;
   position: relative;
+  white-space: nowrap;
 }
 .nav-link:hover { color: var(--ink); }
 .nav-link.active { color: var(--ink); }
@@ -307,20 +308,48 @@ body {
   height: 1px;
   background: var(--bronze);
 }
+/* Pill nav: active becomes a solid pill, no underline */
+[data-nav="pill"] .nav-pill .nav-link.active,
+[data-nav="pill"] .nav-pill .nav-link.active:hover {
+  background: var(--ink);
+  color: var(--on-dark);
+}
+[data-nav="pill"] .nav-pill .nav-link.active::after { display: none; }
 
 /* Logo treatment — invert based on theme */
 .logo-img {
-  height: 168px;
+  height: 100px;
   width: auto;
   transition: filter 0.4s ease, height 0.3s ease;
 }
-.nav.solid .logo-img { height: 144px; }
+.nav.solid .logo-img { height: 78px; }
 @media (max-width: 767.98px) {
-  .logo-img { height: 132px; }
-  .nav.solid .logo-img { height: 120px; }
+  .logo-img { height: 70px; }
+  .nav.solid .logo-img { height: 58px; }
 }
 [data-theme="light"] .logo-img { filter: brightness(0) saturate(100%) invert(15%) sepia(8%) saturate(900%) hue-rotate(70deg) brightness(95%); }
 [data-theme="dark"]  .logo-img { filter: brightness(0) invert(1) opacity(0.95); }
+/* Over the full-bleed overlay hero, keep the logo legible (light) until the nav goes solid */
+[data-theme="light"][data-hero="overlay"] .nav:not(.solid) .logo-img { filter: brightness(0) invert(1) opacity(0.95); }
+
+/* Download items (unlocked after lead form) */
+.dl-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 17px 22px;
+  border: 1px solid rgba(245,241,234,0.18);
+  border-radius: 3px;
+  text-decoration: none;
+  background: rgba(245,241,234,0.02);
+  transition: border-color 0.25s ease, background 0.25s ease, transform 0.2s ease;
+}
+.dl-item:hover { border-color: var(--bronze-lt); background: rgba(245,241,234,0.06); transform: translateX(2px); }
+.dl-meta { display: flex; flex-direction: column; gap: 3px; }
+.dl-name { font-family: 'Inter', sans-serif; font-size: 0.96rem; color: var(--on-dark); }
+.dl-sub { font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.62rem; color: rgba(245,241,234,0.4); }
+.dl-icon { font-size: 1.2rem; color: var(--bronze-lt); flex-shrink: 0; }
 
 /* ─── CARDS / SURFACES ─── */
 .card {
@@ -647,8 +676,14 @@ img, svg, .img-wrap img, .hero-bg {
 
   .teaser-card { grid-template-columns: 1fr !important; }
 
+  .team-grid { grid-template-columns: 1fr 1fr !important; }
+
   .marquee { font-size: 2.4rem; }
   .display { line-height: 1.05; }
+}
+
+@media (max-width: 560px) {
+  .team-grid { grid-template-columns: 1fr !important; }
 }
 
 /* Selection */

@@ -10,16 +10,43 @@
 /* ─── EDIT MODE DEFAULTS (persisted to disk via host) ─── */
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "theme": "light",
-  "palette": "earth",
+  "palette": "mono",
   "hero": "overlay",
-  "nav": "classic",
-  "footer": "editorial",
   "teaser": "editorial",
+  "nav": "pill",
+  "footer": "editorial",
   "anim": "on",
   "lang": "es"
 }/*EDITMODE-END*/;
 
-const STORAGE_KEY = 'cqv.tweaks';
+const STORAGE_KEY = 'cqv.tweaks.v2';
+
+/* ─── LEAD CAPTURE ───
+   Demo behaviour: stores each submission in the browser's localStorage
+   under 'cqv.leads'. This lives only in the visitor's own browser — it is
+   NOT a shared database you can read from.
+
+   To actually collect leads centrally, connect a form backend below. The
+   easiest options for a static site (no server required):
+     • Formspree  → https://formspree.io  (free tier, emails you each lead)
+     • Google Forms / Sheets via an Apps Script Web App
+     • Netlify Forms (if you host on Netlify)
+   Replace the fetch URL with your endpoint and uncomment it. */
+function saveLead(data) {
+  try {
+    const key = 'cqv.leads';
+    const leads = JSON.parse(localStorage.getItem(key) || '[]');
+    leads.push({ ...data, ts: new Date().toISOString() });
+    localStorage.setItem(key, JSON.stringify(leads));
+  } catch (_) {}
+
+  // ── CONECTAR BASE DE DATOS / SERVICIO DE FORMULARIOS (descomentar) ──
+  // fetch('https://formspree.io/f/SU_ID', {
+  //   method: 'POST',
+  //   headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+  //   body: JSON.stringify(data)
+  // });
+}
 
 function loadTweaks() {
   try {
@@ -102,6 +129,54 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  /* ─── Scrollspy: highlight the section currently in view ─── */
+  const spySections = ['inicio', 'nosotros', 'proyectos', 'equipo', 'contacto']
+    .map(id => document.getElementById(id))
+    .filter(Boolean);
+  const navLinks = Array.from(document.querySelectorAll('.nav a[href^="#"]'));
+  function setActiveNav() {
+    const pos = window.scrollY + 160;
+    let currentId = null;
+    spySections.forEach(sec => { if (sec.offsetTop <= pos) currentId = sec.id; });
+    // Snap to the last section when scrolled to the very bottom
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+      currentId = spySections[spySections.length - 1] ? spySections[spySections.length - 1].id : currentId;
+    }
+    navLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + currentId);
+    });
+  }
+  setActiveNav();
+  window.addEventListener('scroll', setActiveNav, { passive: true });
+
+  /* ─── Lead capture: gate document downloads behind the form ─── */
+  const leadForm = document.getElementById('lead-form');
+  if (leadForm) {
+    leadForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(leadForm).entries());
+      const errEl = document.getElementById('lead-error');
+      const required = ['nombre', 'apellido', 'correo', 'telefono'];
+      const missing = required.some(k => !((data[k] || '').trim()));
+      const emailOk = /.+@.+\..+/.test((data.correo || '').trim());
+      if (missing || !emailOk) {
+        if (errEl) errEl.style.display = 'block';
+        const firstBad = required.find(k => !((data[k] || '').trim())) ||
+          (!emailOk ? 'correo' : null);
+        const el = firstBad && leadForm.querySelector('[name="' + firstBad + '"]');
+        if (el) el.focus();
+        return;
+      }
+      if (errEl) errEl.style.display = 'none';
+      saveLead(data);
+      const nameEl = document.getElementById('lead-name');
+      if (nameEl) nameEl.textContent = (data.nombre || '').trim();
+      leadForm.style.display = 'none';
+      const success = document.getElementById('lead-success');
+      if (success) success.style.display = 'block';
+    });
+  }
 
   /* Build tweaks panel */
   buildTweaksPanel(tweaks);
