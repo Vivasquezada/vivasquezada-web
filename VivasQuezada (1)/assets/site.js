@@ -22,17 +22,24 @@ const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
 const STORAGE_KEY = 'cqv.tweaks.v2';
 
 /* ─── LEAD CAPTURE ───
-   Demo behaviour: stores each submission in the browser's localStorage
-   under 'cqv.leads'. This lives only in the visitor's own browser — it is
-   NOT a shared database you can read from.
+   Cada envío se manda a LEAD_ENDPOINT y se guarda además en el navegador
+   (localStorage 'cqv.leads') como respaldo. Si LEAD_ENDPOINT queda vacío,
+   el formulario sigue funcionando (se desbloquea la descarga) pero los datos
+   solo se guardan localmente — NO en una base de datos central.
 
-   To actually collect leads centrally, connect a form backend below. The
-   easiest options for a static site (no server required):
-     • Formspree  → https://formspree.io  (free tier, emails you each lead)
-     • Google Forms / Sheets via an Apps Script Web App
-     • Netlify Forms (if you host on Netlify)
-   Replace the fetch URL with your endpoint and uncomment it. */
-function saveLead(data) {
+   CÓMO CONECTAR LA BASE DE DATOS (recomendado — Formspree, sin servidor):
+     1. Cree un formulario gratis en https://formspree.io
+     2. Copie la URL del formulario, ej. https://formspree.io/f/abcdwxyz
+     3. Péguela abajo en LEAD_ENDPOINT (entre las comillas).
+   Los envíos llegan por correo y aparecen en el panel de Formspree,
+   exportables a CSV / Google Sheets.
+
+   Alternativas: Google Forms/Sheets (Apps Script) o una función serverless
+   de Vercel escribiendo a una base de datos. */
+const LEAD_ENDPOINT = ''; // ← pegue aquí su URL de Formspree
+
+async function sendLead(data) {
+  // Respaldo local (solo en este navegador)
   try {
     const key = 'cqv.leads';
     const leads = JSON.parse(localStorage.getItem(key) || '[]');
@@ -40,12 +47,18 @@ function saveLead(data) {
     localStorage.setItem(key, JSON.stringify(leads));
   } catch (_) {}
 
-  // ── CONECTAR BASE DE DATOS / SERVICIO DE FORMULARIOS (descomentar) ──
-  // fetch('https://formspree.io/f/SU_ID', {
-  //   method: 'POST',
-  //   headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
-  //   body: JSON.stringify(data)
-  // });
+  // Envío al servicio de formularios (si está configurado)
+  if (LEAD_ENDPOINT) {
+    try {
+      const res = await fetch(LEAD_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      return res.ok;
+    } catch (_) { return false; }
+  }
+  return true;
 }
 
 function loadTweaks() {
@@ -153,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ─── Lead capture: gate document downloads behind the form ─── */
   const leadForm = document.getElementById('lead-form');
   if (leadForm) {
-    leadForm.addEventListener('submit', (e) => {
+    leadForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const data = Object.fromEntries(new FormData(leadForm).entries());
       const errEl = document.getElementById('lead-error');
@@ -169,12 +182,42 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
       if (errEl) errEl.style.display = 'none';
-      saveLead(data);
+      const btn = leadForm.querySelector('button[type="submit"]');
+      if (btn) { btn.disabled = true; btn.style.opacity = '.6'; }
+      data.origen = 'Landing — material descargable';
+      await sendLead(data);
       const nameEl = document.getElementById('lead-name');
       if (nameEl) nameEl.textContent = (data.nombre || '').trim();
       leadForm.style.display = 'none';
       const success = document.getElementById('lead-success');
       if (success) success.style.display = 'block';
+    });
+  }
+
+  /* ─── Inquiry form (Viva Tower II) — same lead database, simple thank-you ─── */
+  const inquiry = document.getElementById('inquiry-form');
+  if (inquiry) {
+    inquiry.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(inquiry).entries());
+      const errEl = document.getElementById('inquiry-error');
+      const required = ['nombre', 'apellido', 'telefono'];
+      const missing = required.some(k => !((data[k] || '').trim()));
+      const emailOk = /.+@.+\..+/.test((data.correo || '').trim());
+      if (missing || !emailOk) {
+        if (errEl) errEl.style.display = 'block';
+        return;
+      }
+      if (errEl) errEl.style.display = 'none';
+      const btn = inquiry.querySelector('button[type="submit"]');
+      if (btn) { btn.disabled = true; btn.style.opacity = '.6'; }
+      data.origen = 'Viva Tower II — solicitud';
+      await sendLead(data);
+      const nameEl = document.getElementById('inquiry-name');
+      if (nameEl) nameEl.textContent = (data.nombre || '').trim();
+      inquiry.style.display = 'none';
+      const ok = document.getElementById('inquiry-success');
+      if (ok) ok.style.display = 'block';
     });
   }
 
