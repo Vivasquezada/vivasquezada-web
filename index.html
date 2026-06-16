@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light" data-palette="mono" data-hero="overlay" data-nav="pill" data-footer="editorial" data-teaser="editorial" data-anim="on">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Constructora Quezada Vivas SRL — Espacios que transforman vidas</title>
+  <meta name="description" content="Constructora dominicana especializada en residencias de lujo. Calidad superior, diseño contemporáneo y entrega puntual.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<!-- ════════════════ NAV ════════════════ -->
+<nav class="nav">
+  <!-- Classic nav -->
+  <div class="nav-row nav-classic">
+    <a href="index.html" class="logo-link" aria-label="Constructora Quezada Vivas">
+      <img class="logo-img" src="assets/logo-quezada-vivas.png" alt="Constructora Quezada Vivas">
+    </a>
+
+    <div class="hidden md:flex items-center" style="gap:36px">
+      <a class="nav-link" href="#nosotros" data-i18n-es="Nosotros" data-i18n-en="About">Nosotros</a>
+      <a class="nav-link" href="#proyectos" data-i18n-es="Proyectos" data-i18n-en="Projects">Proyectos</a>
+      <a class="nav-link" href="#equipo" data-i18n-es="Equipo" data-i18n-en="Team">Equipo</a>
+      <a class="nav-link" href="#contacto" data-i18n-es="Contacto" data-i18n-en="Contact">Contacto</a>
+      <a class="btn btn-outline" href="#contacto" style="padding:10px 22px" data-i18n-es="Reservar cita" data-i18n-en="Book a visit">Reservar cita</a>
+    </div>
+
+    <button class="md:hidden" data-mobile-toggle aria-label="Menú" style="background:transparent;border:0;color:var(--ink);padding:6px">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+
+  <!-- Pill nav -->
+  <div class="nav-row nav-pill" style="display:none">
+    <a href="index.html" class="logo-link" aria-label="Constructora Quezada Vivas">
+      <img class="logo-img" src="assets/logo-quezada-vivas.png" alt="Constructora Quezada Vivas">
+    </a>
+    <div class="hidden md:flex items-center" style="gap:6px;padding:6px;border:1px solid var(--line);border-radius:999px;background:var(--surface)">
+      <a class="nav-link" href="#nosotros" style="padding:8px 16px;border-radius:999px" data-i18n-es="Nosotros" data-i18n-en="About">Nosotros</a>
+      <a class="nav-link" href="#proyectos" style="padding:8px 16px;border-radius:999px" data-i18n-es="Proyectos" data-i18n-en="Projects">Proyectos</a>
+      <a class="nav-link" href="#equipo" style="padding:8px 16px;border-radius:999px" data-i18n-es="Equipo" data-i18n-en="Team">Equipo</a>
+      <a class="nav-link" href="#contacto" style="padding:8px 16px;border-radius:999px" data-i18n-es="Contacto" data-i18n-en="Contact">Contacto</a>
+    </div>
+    <span style="font-family:'Barlow Condensed';text-transform:uppercase;letter-spacing:.2em;font-size:.7rem;color:var(--ink-mute)" class="hidden md:inline">RD · Est. 2018</span>
+  </div>
+
+  <!-- Mobile menu -->
+  <div data-mobile-menu class="hidden md:hidden" style="margin-top:14px;padding:18px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:14px">
+    <a class="nav-link" href="#nosotros" data-i18n-es="Nosotros" data-i18n-en="About">Nosotros</a>
+    <a class="nav-link" href="#proyectos" data-i18n-es="Proyectos" data-i18n-en="Projects">Proyectos</a>
+    <a class="nav-link" href="#equipo" data-i18n-es="Equipo" data-i18n-en="Team">Equipo</a>
+    <a class="nav-link" href="#contacto" data-i18n-es="Contacto" data-i18n-en="Contact">Contacto</a>
+  </div>
+</nav>
+
+
+<!-- ════════════════ HERO — VARIANT A: SPLIT ════════════════ -->
+<section id="inicio" class="hero-split grain" style="grid-template-columns:1fr 1fr;min-height:100vh;padding-top:120px;padding-bottom:80px;align-items:center;">
+  <div style="padding:0 max(24px,5vw);max-width:680px;justify-self:end;width:100%">
+    <p class="eyebrow reveal on" style="margin-bottom:32px">
+      <span data-i18n-es="República Dominicana · Desde 2018" data-i18n-en="Dominican Republic · Since 2018">República Dominicana · Desde 2018</span>
+    </p>
+    <h1 class="display reveal on" style="font-size:clamp(3rem,7vw,6.2rem);margin-bottom:36px">
+      <span data-i18n-es="Espacios que" data-i18n-en="Spaces that">Espacios que</span><br>
+      <em data-i18n-es="transforman" data-i18n-en="transform">transforman</em><br>
+      <span data-i18n-es="vidas." data-i18n-en="lives.">vidas.</span>
+    </h1>
+    <p class="reveal on" style="font-size:1.05rem;line-height:1.75;color:var(--ink-soft);max-width:480px;margin-bottom:44px" data-i18n-es="Constructora Quezada Vivas SRL desarrolla residencias contemporáneas en la República Dominicana. Calidad superior, diseño honesto y atención al cliente que se siente en cada detalle." data-i18n-en="Constructora Quezada Vivas SRL develops contemporary residences across the Dominican Republic. Superior quality, honest design, and a level of client care you can feel in every detail.">
+      Constructora Quezada Vivas SRL desarrolla residencias contemporáneas en la República Dominicana. Calidad superior, diseño honesto y atención al cliente que se siente en cada detalle.
+    </p>
+    <div class="reveal on" style="display:flex;gap:14px;flex-wrap:wrap">
+      <a class="btn btn-solid" href="#proyectos" data-i18n-es="Ver proyectos" data-i18n-en="See projects">Ver proyectos</a>
+      <a class="btn btn-outline" href="#contacto" data-i18n-es="Hablemos →" data-i18n-en="Let's talk →">Hablemos →</a>
+    </div>
+  </div>
+
+  <div style="height:88vh;min-height:600px;padding:0 max(24px,5vw) 0 0;display:flex">
+    <div class="img-wrap" style="width:100%;height:100%;border-radius:2px">
+      <img src="assets/santo-domingo-skyline.jpg" alt="Vista aérea de Santo Domingo al atardecer">
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════ HERO — VARIANT B: OVERLAY ════════════════ -->
+<section class="hero-overlay grain" style="display:none;position:relative;min-height:100vh;align-items:flex-end;overflow:hidden">
+  <img src="assets/santo-domingo-skyline.jpg" alt="Vista aérea de Santo Domingo al atardecer" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+  <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,10,12,.92) 0%,rgba(8,10,12,.66) 42%,rgba(8,10,12,.42) 100%)"></div>
+  <div style="position:relative;z-index:2;padding:0 max(24px,5vw) 96px;max-width:1320px;margin:0 auto;width:100%">
+    <p class="eyebrow" style="color:var(--bronze-lt);margin-bottom:32px"><span data-i18n-es="República Dominicana · Desde 2018" data-i18n-en="Dominican Republic · Since 2018">República Dominicana · Desde 2018</span></p>
+    <h1 class="display" style="font-size:clamp(3rem,8vw,7rem);color:var(--on-dark);margin-bottom:40px;max-width:1000px">
+      <span data-i18n-es="Espacios que" data-i18n-en="Spaces that">Espacios que</span> <em style="color:var(--bronze-lt)" data-i18n-es="transforman vidas." data-i18n-en="transform lives.">transforman vidas.</em>
+    </h1>
+    <p style="color:rgba(245,241,234,.78);font-size:1.1rem;line-height:1.75;max-width:560px;margin-bottom:44px" data-i18n-es="Constructora dominicana especializada en residencias contemporáneas. Calidad superior, diseño honesto, atención al detalle." data-i18n-en="A Dominican developer specialising in contemporary residences. Superior quality, honest design, attention to detail.">
+      Constructora dominicana especializada en residencias contemporáneas. Calidad superior, diseño honesto, atención al detalle.
+    </p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap">
+      <a class="btn btn-bronze" href="#proyectos" data-i18n-es="Ver proyectos" data-i18n-en="See projects">Ver proyectos</a>
+      <a class="btn btn-outline-light" href="#contacto" data-i18n-es="Hablemos" data-i18n-en="Let's talk">Hablemos</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════ HERO — VARIANT C: STACK (editorial) ════════════════ -->
+<section class="hero-stack grain" style="display:none;padding-top:140px;padding-bottom:0">
+  <div class="container" style="padding:0 max(24px,5vw) 72px">
+    <p class="eyebrow reveal on" style="margin-bottom:48px"><span data-i18n-es="Constructora Quezada Vivas SRL" data-i18n-en="Constructora Quezada Vivas SRL">Constructora Quezada Vivas SRL</span></p>
+    <h1 class="display reveal on" style="font-size:clamp(3.2rem,9vw,9rem);max-width:1100px">
+      <span data-i18n-es="Edificamos" data-i18n-en="We build">Edificamos</span> <em data-i18n-es="hogares" data-i18n-en="homes">hogares</em><br>
+      <span data-i18n-es="que duran" data-i18n-en="that outlast">que duran</span><br>
+      <span data-i18n-es="generaciones." data-i18n-en="generations.">generaciones.</span>
+    </h1>
+    <div class="reveal on" style="display:flex;justify-content:space-between;align-items:flex-end;margin-top:64px;gap:48px;flex-wrap:wrap">
+      <p style="font-size:1.05rem;line-height:1.75;color:var(--ink-soft);max-width:480px" data-i18n-es="Ocho años desarrollando residencias contemporáneas en la República Dominicana — y un solo estándar de ejecución." data-i18n-en="Eight years developing contemporary residences across the Dominican Republic — held to a single standard of execution.">
+        Ocho años desarrollando residencias contemporáneas en la República Dominicana — y un solo estándar de ejecución.
+      </p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap">
+        <a class="btn btn-solid" href="#proyectos" data-i18n-es="Nuestro portafolio" data-i18n-en="Our portfolio">Nuestro portafolio</a>
+        <a class="btn btn-outline" href="#contacto" data-i18n-es="Contacto" data-i18n-en="Contact">Contacto</a>
+      </div>
+    </div>
+  </div>
+  <div class="reveal on" style="height:72vh;min-height:520px;padding:0 max(24px,5vw)">
+    <div class="img-wrap" style="height:100%">
+      <img src="assets/santo-domingo-skyline.jpg" alt="Vista aérea de Santo Domingo al atardecer">
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════ STATS ════════════════ -->
+<section class="bg-paper-2" style="padding:64px max(24px,5vw);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="container" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:48px">
+    <div class="reveal">
+      <p class="display" style="font-size:3.4rem;color:var(--ink)">8</p>
+      <p class="eyebrow" style="margin-top:6px;color:var(--ink-mute)" data-i18n-es="Años construyendo" data-i18n-en="Years building">Años construyendo</p>
+    </div>
+    <div class="reveal">
+      <p class="display" style="font-size:3.4rem;color:var(--ink)">25</p>
+      <p class="eyebrow" style="margin-top:6px;color:var(--ink-mute)" data-i18n-es="Familias en nuestros hogares" data-i18n-en="Families in our homes">Familias en nuestros hogares</p>
+    </div>
+    <div class="reveal">
+      <p class="display" style="font-size:3.4rem;color:var(--ink)">100<span style="color:var(--bronze)">%</span></p>
+      <p class="eyebrow" style="margin-top:6px;color:var(--ink-mute)" data-i18n-es="Compromiso de calidad" data-i18n-en="Quality commitment">Compromiso de calidad</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════ ABOUT ════════════════ -->
+<section id="nosotros" class="section">
+  <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center">
+
+    <div class="reveal" style="order:1">
+      <div class="img-wrap" style="aspect-ratio:4/5">
+        <img src="brand_assets/perspectivasvivasii/LOBBY.JPEG" alt="Constructora Quezada Vivas">
+      </div>
+    </div>
+
+    <div class="reveal" style="order:2;max-width:520px">
+      <p class="eyebrow" data-i18n-es="Quiénes somos" data-i18n-en="Who we are">Quiénes somos</p>
+      <h2 class="display bronze-rule" style="font-size:clamp(2.2rem,4vw,3.6rem);margin-top:18px">
+        <span data-i18n-es="Ocho años" data-i18n-en="Eight years">Ocho años</span><br>
+        <em data-i18n-es="construyendo" data-i18n-en="building">construyendo</em><br>
+        <span data-i18n-es="confianza." data-i18n-en="trust.">confianza.</span>
+      </h2>
+      <p style="margin-top:36px;font-size:1.02rem;line-height:1.85;color:var(--ink-soft)" data-i18n-es="Constructora Quezada Vivas es una empresa dedicada al desarrollo y construcción de proyectos inmobiliarios que combinan calidad, funcionalidad y una sólida visión de inversión. Nos enfocamos en crear espacios diseñados para brindar bienestar a las familias y generar valor a nuestros clientes, trabajando con responsabilidad, transparencia y compromiso en cada etapa del proceso constructivo para ofrecer proyectos confiables y duraderos." data-i18n-en="Constructora Quezada Vivas is a company dedicated to the development and construction of real-estate projects that combine quality, functionality and a solid investment vision. We focus on creating spaces designed to bring wellbeing to families and generate value for our clients, working with responsibility, transparency and commitment at every stage of the construction process to deliver reliable, lasting projects.">
+        Constructora Quezada Vivas es una empresa dedicada al desarrollo y construcción de proyectos inmobiliarios que combinan calidad, funcionalidad y una sólida visión de inversión. Nos enfocamos en crear espacios diseñados para brindar bienestar a las familias y generar valor a nuestros clientes, trabajando con responsabilidad, transparencia y compromiso en cada etapa del proceso constructivo para ofrecer proyectos confiables y duraderos.
+      </p>
+
+      <div style="margin-top:48px;display:grid;grid-template-columns:1fr 1fr;gap:32px 24px">
+        <div>
+          <p class="eyebrow" style="color:var(--bronze)" data-i18n-es="Calidad" data-i18n-en="Quality">Calidad</p>
+          <p style="margin-top:6px;color:var(--ink-2);font-size:.9rem;line-height:1.55" data-i18n-es="Materiales premium y acabados de primera clase, sin atajos." data-i18n-en="Premium materials and first-class finishes, with no shortcuts.">Materiales premium y acabados de primera clase, sin atajos.</p>
+        </div>
+        <div>
+          <p class="eyebrow" style="color:var(--bronze)" data-i18n-es="Diseño" data-i18n-en="Design">Diseño</p>
+          <p style="margin-top:6px;color:var(--ink-2);font-size:.9rem;line-height:1.55" data-i18n-es="Arquitectura contemporánea que prioriza luz, flujo y proporción." data-i18n-en="Contemporary architecture rooted in light, flow and proportion.">Arquitectura contemporánea que prioriza luz, flujo y proporción.</p>
+        </div>
+        <div>
+          <p class="eyebrow" style="color:var(--bronze)" data-i18n-es="Entrega" data-i18n-en="Delivery">Entrega</p>
+          <p style="margin-top:6px;color:var(--ink-2);font-size:.9rem;line-height:1.55" data-i18n-es="Cronogramas precisos y comunicación transparente." data-i18n-en="Precise schedules and transparent communication.">Cronogramas precisos y comunicación transparente.</p>
+        </div>
+        <div>
+          <p class="eyebrow" style="color:var(--bronze)" data-i18n-es="Servicio" data-i18n-en="Service">Servicio</p>
+          <p style="margin-top:6px;color:var(--ink-2);font-size:.9rem;line-height:1.55" data-i18n-es="Acompañamiento desde la reserva hasta mucho después de la entrega." data-i18n-en="Support from reservation through long after handover.">Acompañamiento desde la reserva hasta mucho después de la entrega.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════ MARQUEE ════════════════ -->
+<div style="overflow:hidden;padding:24px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper)">
+  <div class="marquee" style="will-change:transform">
+    <span>Calidad · Diseño · Confianza · Calidad · Diseño · Confianza ·&nbsp;</span>
+    <span>Calidad · Diseño · Confianza · Calidad · Diseño · Confianza ·&nbsp;</span>
+  </div>
+</div>
+
+
+<!-- ════════════════ PROJECTS ════════════════ -->
+<section id="proyectos" class="section bg-paper">
+  <div class="container">
+
+    <header class="reveal" style="display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;margin-bottom:72px">
+      <div>
+        <p class="eyebrow" data-i18n-es="Portafolio" data-i18n-en="Portfolio">Portafolio</p>
+        <h2 class="display" style="font-size:clamp(2.2rem,4.5vw,4rem);margin-top:18px;max-width:680px">
+          <span data-i18n-es="Cada proyecto es una" data-i18n-en="Every project is a">Cada proyecto es una</span><br>
+          <em data-i18n-es="afirmación" data-i18n-en="statement">afirmación</em>
+          <span data-i18n-es="de calidad." data-i18n-en="of quality.">de calidad.</span>
+        </h2>
+      </div>
+      <p style="max-width:340px;color:var(--ink-soft);line-height:1.7;font-size:.95rem" data-i18n-es="Desarrollamos torres residenciales en Santo Domingo. Selección actual y proyectos entregados." data-i18n-en="We develop residential towers in Santo Domingo. Current selection and delivered projects.">
+        Desarrollamos torres residenciales en Santo Domingo. Selección actual y proyectos entregados.
+      </p>
+    </header>
+
+
+    <!-- ─── TEASER VARIANT A: EDITORIAL ─── -->
+    <div class="teaser-editorial" style="display:grid;gap:120px">
+
+      <!-- Project 1: Viva Tower II -->
+      <article class="reveal" style="display:grid;grid-template-columns:1.3fr 1fr;gap:64px;align-items:center">
+        <a href="viva-tower-ii.html" class="img-wrap" style="aspect-ratio:4/3;display:block">
+          <img src="brand_assets/perspectivasvivasii/VISTA 2 -V3 - REDES SOCIALES.JPEG" alt="Viva Tower II">
+        </a>
+        <div>
+          <div style="display:flex;gap:14px;align-items:center;margin-bottom:18px">
+            <span style="width:8px;height:8px;background:var(--bronze);border-radius:999px"></span>
+            <span class="eyebrow" style="color:var(--bronze)" data-i18n-es="En desarrollo · Entrega 2029" data-i18n-en="In development · Delivery 2029">En desarrollo · Entrega 2029</span>
+          </div>
+          <p class="eyebrow" style="color:var(--ink-mute);font-size:.7rem">PROYECTO 02</p>
+          <h3 class="display" style="font-size:clamp(2rem,4vw,3.2rem);margin:8px 0 24px;line-height:1">Viva <em>Tower II</em></h3>
+          <p style="color:var(--ink-soft);line-height:1.78;font-size:.98rem;margin-bottom:32px" data-i18n-es="Siete niveles de residencias contemporáneas en el corazón de Santo Domingo. Seis tipologías, amenidades de resort y un acabado que redefine el estándar local." data-i18n-en="Seven floors of contemporary residences in the heart of Santo Domingo. Six unit types, resort-grade amenities, and a finish that redefines the local standard.">
+            Siete niveles de residencias contemporáneas en el corazón de Santo Domingo. Seis tipologías, amenidades de resort y un acabado que redefine el estándar local.
+          </p>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:24px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:32px">
+            <div><p class="display" style="font-size:1.4rem">7</p><p class="eyebrow" style="color:var(--ink-mute);font-size:.65rem;margin-top:4px" data-i18n-es="Niveles" data-i18n-en="Floors">Niveles</p></div>
+            <div><p class="display" style="font-size:1.4rem">6</p><p class="eyebrow" style="color:var(--ink-mute);font-size:.65rem;margin-top:4px" data-i18n-es="Tipologías" data-i18n-en="Unit types">Tipologías</p></div>
+            <div><p class="display" style="font-size:1.4rem">1–2</p><p class="eyebrow" style="color:var(--ink-mute);font-size:.65rem;margin-top:4px" data-i18n-es="Hab." data-i18n-en="Bed.">Hab.</p></div>
+          </div>
+          <a class="btn btn-solid" href="viva-tower-ii.html" data-i18n-es="Conocer el proyecto" data-i18n-en="Explore the project">Conocer el proyecto</a>
+        </div>
+      </article>
+
+      <!-- Project 2: Viva Tower I -->
+      <article class="reveal" style="display:grid;grid-template-columns:1fr 1.3fr;gap:64px;align-items:center">
+        <div style="order:2">
+          <a href="viva-tower-i.html" class="img-wrap" style="aspect-ratio:4/3;display:block">
+            <img src="brand_assets/perspectivasvivasii/AREA SOCIAL 01.JPEG" alt="Viva Tower I">
+          </a>
+        </div>
+        <div style="order:1">
+          <div style="display:flex;gap:14px;align-items:center;margin-bottom:18px">
+            <span style="width:8px;height:8px;background:var(--ink-mute);border-radius:999px"></span>
+            <span class="eyebrow" style="color:var(--ink-mute)" data-i18n-es="Entregado · 2022" data-i18n-en="Delivered · 2022">Entregado · 2022</span>
+          </div>
+          <p class="eyebrow" style="color:var(--ink-mute);font-size:.7rem">PROYECTO 01</p>
+          <h3 class="display" style="font-size:clamp(2rem,4vw,3.2rem);margin:8px 0 24px;line-height:1">Viva <em>Tower I</em></h3>
+          <p style="color:var(--ink-soft);line-height:1.78;font-size:.98rem;margin-bottom:32px" data-i18n-es="Nuestro primer hito en altura. Una torre residencial entregada en 2022 que estableció la base del estándar Viva: arquitectura limpia, espacios eficientes y comunidad cuidada." data-i18n-en="Our first vertical milestone. A residential tower delivered in 2022 that set the foundation of the Viva standard: clean architecture, efficient spaces, a community held to the highest care.">
+            Nuestro primer hito en altura. Una torre residencial entregada en 2022 que estableció la base del estándar Viva: arquitectura limpia, espacios eficientes y comunidad cuidada.
+          </p>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:24px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:32px">
+            <div><p class="display" style="font-size:1.4rem">6</p><p class="eyebrow" style="color:var(--ink-mute);font-size:.65rem;margin-top:4px" data-i18n-es="Niveles" data-i18n-en="Floors">Niveles</p></div>
+            <div><p class="display" style="font-size:1.4rem">25</p><p class="eyebrow" style="color:var(--ink-mute);font-size:.65rem;margin-top:4px" data-i18n-es="Unidades" data-i18n-en="Units">Unidades</p></div>
+            <div><p class="display" style="font-size:1.4rem">100<span style="color:var(--bronze)">%</span></p><p class="eyebrow" style="color:var(--ink-mute);font-size:.65rem;margin-top:4px" data-i18n-es="Ocupado" data-i18n-en="Occupied">Ocupado</p></div>
+          </div>
+          <a class="btn btn-outline" href="viva-tower-i.html" data-i18n-es="Ver proyecto" data-i18n-en="View project">Ver proyecto</a>
+        </div>
+      </article>
+
+    </div>
+
+
+    <!-- ─── TEASER VARIANT B: CARD ─── -->
+    <div class="teaser-card" style="display:none;grid-template-columns:1fr 1fr;gap:24px">
+      <a href="viva-tower-ii.html" class="reveal card" style="text-decoration:none;color:inherit;display:block;overflow:hidden">
+        <div class="img-wrap" style="aspect-ratio:4/3"><img src="brand_assets/perspectivasvivasii/VISTA 2 -V3 - REDES SOCIALES.JPEG" alt="Viva Tower II"></div>
+        <div style="padding:32px">
+          <div style="display:flex;gap:12px;align-items:center;margin-bottom:14px">
+            <span style="width:6px;height:6px;background:var(--bronze);border-radius:999px"></span>
+            <span class="eyebrow" style="color:var(--bronze);font-size:.65rem" data-i18n-es="En desarrollo" data-i18n-en="In development">En desarrollo</span>
+          </div>
+          <h3 class="display" style="font-size:2rem;margin-bottom:10px">Viva <em>Tower II</em></h3>
+          <p style="color:var(--ink-soft);font-size:.92rem;line-height:1.65;margin-bottom:20px" data-i18n-es="7 niveles · 6 tipologías · Santo Domingo · Entrega 2029" data-i18n-en="7 floors · 6 unit types · Santo Domingo · Delivery 2029">7 niveles · 6 tipologías · Santo Domingo · Entrega 2029</p>
+          <span class="btn-link" style="border-bottom:1px solid var(--ink);padding-bottom:2px;font-family:'Barlow Condensed';text-transform:uppercase;letter-spacing:.14em;font-size:.78rem" data-i18n-es="Conocer proyecto →" data-i18n-en="Explore →">Conocer proyecto →</span>
+        </div>
+      </a>
+      <a href="viva-tower-i.html" class="reveal card" style="text-decoration:none;color:inherit;display:block;overflow:hidden">
+        <div class="img-wrap" style="aspect-ratio:4/3"><img src="brand_assets/perspectivasvivasii/AREA SOCIAL 01.JPEG" alt="Viva Tower I"></div>
+        <div style="padding:32px">
+          <div style="display:flex;gap:12px;align-items:center;margin-bottom:14px">
+            <span style="width:6px;height:6px;background:var(--ink-mute);border-radius:999px"></span>
+            <span class="eyebrow" style="color:var(--ink-mute);font-size:.65rem" data-i18n-es="Entregado 2022" data-i18n-en="Delivered 2022">Entregado 2022</span>
+          </div>
+          <h3 class="display" style="font-size:2rem;margin-bottom:10px">Viva <em>Tower I</em></h3>
+          <p style="color:var(--ink-soft);font-size:.92rem;line-height:1.65;margin-bottom:20px" data-i18n-es="6 niveles · 25 unidades · 100% ocupado" data-i18n-en="6 floors · 25 units · 100% occupied">6 niveles · 25 unidades · 100% ocupado</p>
+          <span class="btn-link" style="border-bottom:1px solid var(--ink);padding-bottom:2px;font-family:'Barlow Condensed';text-transform:uppercase;letter-spacing:.14em;font-size:.78rem" data-i18n-es="Ver proyecto →" data-i18n-en="View project →">Ver proyecto →</span>
+        </div>
+      </a>
+    </div>
+
+
+    <!-- ─── TEASER VARIANT C: FULL-BLEED ─── -->
+    <div class="teaser-fullbleed" style="display:none">
+      <a href="viva-tower-ii.html" class="reveal img-wrap with-shade" style="display:block;aspect-ratio:21/9;margin-bottom:32px">
+        <img src="brand_assets/perspectivasvivasii/VISTA 2 -V3 - REDES SOCIALES.JPEG" alt="Viva Tower II">
+        <div style="position:absolute;inset:auto 0 0 0;padding:48px;z-index:2;color:var(--on-dark)">
+          <span class="eyebrow" style="color:var(--bronze-lt)" data-i18n-es="En desarrollo · Santo Domingo" data-i18n-en="In development · Santo Domingo">En desarrollo · Santo Domingo</span>
+          <h3 class="display" style="font-size:clamp(2.5rem,5vw,4.5rem);color:var(--on-dark);margin-top:12px">Viva <em style="color:var(--bronze-lt)">Tower II</em></h3>
+          <span class="btn-link" style="color:var(--on-dark);border-color:var(--on-dark);margin-top:16px;display:inline-block" data-i18n-es="Conocer proyecto →" data-i18n-en="Explore →">Conocer proyecto →</span>
+        </div>
+      </a>
+      <a href="viva-tower-i.html" class="reveal img-wrap with-shade" style="display:block;aspect-ratio:21/9">
+        <img src="brand_assets/perspectivasvivasii/AREA SOCIAL 01.JPEG" alt="Viva Tower I">
+        <div style="position:absolute;inset:auto 0 0 0;padding:48px;z-index:2;color:var(--on-dark)">
+          <span class="eyebrow" style="color:var(--bronze-lt)" data-i18n-es="Entregado · 2022" data-i18n-en="Delivered · 2022">Entregado · 2022</span>
+          <h3 class="display" style="font-size:clamp(2.5rem,5vw,4.5rem);color:var(--on-dark);margin-top:12px">Viva <em style="color:var(--bronze-lt)">Tower I</em></h3>
+          <span class="btn-link" style="color:var(--on-dark);border-color:var(--on-dark);margin-top:16px;display:inline-block" data-i18n-es="Ver proyecto →" data-i18n-en="View project →">Ver proyecto →</span>
+        </div>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════ TEAM ════════════════ -->
+<section id="equipo" class="section-tight bg-paper-2">
+  <div class="container">
+    <header class="reveal" style="max-width:680px;margin-bottom:44px">
+      <p class="eyebrow" data-i18n-es="El equipo" data-i18n-en="The team">El equipo</p>
+      <h2 class="display bronze-rule" style="font-size:clamp(2.2rem,4.5vw,3.8rem);margin-top:18px">
+        <span data-i18n-es="Personas detrás de" data-i18n-en="People behind">Personas detrás de</span><br>
+        <em data-i18n-es="cada metro." data-i18n-en="every metre.">cada metro.</em>
+      </h2>
+      <p style="margin-top:28px;color:var(--ink-soft);line-height:1.75;font-size:.98rem" data-i18n-es="Arquitectos, ingenieros y gestores con experiencia comprobada en proyectos residenciales de gran escala." data-i18n-en="Architects, engineers and managers with proven experience in large-scale residential projects.">
+        Arquitectos, ingenieros y gestores con experiencia comprobada en proyectos residenciales de gran escala.
+      </p>
+    </header>
+
+    <div class="stagger team-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px">
+      <!-- Person 1 -->
+      <div class="reveal" style="border-top:1px solid var(--line);padding-top:24px">
+        <p class="display" style="font-size:clamp(1.5rem,2vw,2rem);line-height:1.12">Juan Emilio Gutiérrez Quezada</p>
+        <p class="eyebrow" style="color:var(--bronze);margin-top:14px" data-i18n-es="Gerente General" data-i18n-en="General Manager">Gerente General</p>
+      </div>
+      <!-- Person 2 -->
+      <div class="reveal" style="border-top:1px solid var(--line);padding-top:24px">
+        <p class="display" style="font-size:clamp(1.5rem,2vw,2rem);line-height:1.12">Robert Gill</p>
+        <p class="eyebrow" style="color:var(--bronze);margin-top:14px" data-i18n-es="Arquitecto" data-i18n-en="Architect">Arquitecto</p>
+      </div>
+      <!-- Person 3 -->
+      <div class="reveal" style="border-top:1px solid var(--line);padding-top:24px">
+        <p class="display" style="font-size:clamp(1.5rem,2vw,2rem);line-height:1.12">Elizaul Tejada</p>
+        <p class="eyebrow" style="color:var(--bronze);margin-top:14px" data-i18n-es="Ingeniero" data-i18n-en="Engineer">Ingeniero</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════ CONTACT ════════════════ -->
+<section id="contacto" class="section surface-dark grain" style="position:relative;overflow:hidden">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,color-mix(in oklab,var(--bronze) 14%,transparent),transparent 55%);pointer-events:none"></div>
+  <div class="container" style="position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:start">
+
+    <div class="reveal">
+      <p class="eyebrow" style="color:var(--bronze-lt)" data-i18n-es="Contacto" data-i18n-en="Contact">Contacto</p>
+      <h2 class="display" style="font-size:clamp(2.2rem,4.5vw,4rem);color:var(--on-dark);margin-top:18px">
+        <span data-i18n-es="Hablemos de su" data-i18n-en="Let's talk about your">Hablemos de su</span><br>
+        <em style="color:var(--bronze-lt)" data-i18n-es="próximo hogar." data-i18n-en="next home.">próximo hogar.</em>
+      </h2>
+      <p style="margin-top:32px;color:rgba(245,241,234,.6);line-height:1.78;font-size:1rem;max-width:440px" data-i18n-es="Complete el formulario para recibir nuestro material descargable —brochures, tipologías y precios— y nuestro equipo le contactará en menos de 24 horas." data-i18n-en="Fill in the form to unlock our downloadable material —brochures, floor plans and pricing— and our team will reach out within 24 hours.">
+        Complete el formulario para recibir nuestro material descargable —brochures, tipologías y precios— y nuestro equipo le contactará en menos de 24 horas.
+      </p>
+
+      <div style="margin-top:56px;display:flex;flex-direction:column;gap:28px">
+        <div>
+          <p class="eyebrow" style="color:rgba(245,241,234,.4);font-size:.65rem" data-i18n-es="Teléfono" data-i18n-en="Phone">Teléfono</p>
+          <a href="tel:+18095646802" style="color:var(--on-dark);font-family:'Playfair Display';font-size:1.25rem;font-style:italic;text-decoration:none">(809) 564-6802</a>
+        </div>
+        <div>
+          <p class="eyebrow" style="color:rgba(245,241,234,.4);font-size:.65rem">WhatsApp</p>
+          <a href="https://wa.me/18293021658" target="_blank" rel="noopener" style="color:var(--on-dark);font-family:'Playfair Display';font-size:1.25rem;font-style:italic;text-decoration:none">(829) 302-1658</a>
+        </div>
+        <div>
+          <p class="eyebrow" style="color:rgba(245,241,234,.4);font-size:.65rem" data-i18n-es="Correo" data-i18n-en="Email">Correo</p>
+          <a href="mailto:ventas@constructoraquezadavivas.com" style="color:var(--on-dark);font-family:'Playfair Display';font-size:1.25rem;font-style:italic;text-decoration:none">ventas@constructoraquezadavivas.com</a>
+        </div>
+        <div>
+          <p class="eyebrow" style="color:rgba(245,241,234,.4);font-size:.65rem" data-i18n-es="Oficina" data-i18n-en="Office">Oficina</p>
+          <p style="color:var(--on-dark);font-family:'Playfair Display';font-size:1.25rem;font-style:italic">Av. Luperón, Los Próceres #21, Santo Domingo</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal" style="position:relative">
+    <form id="lead-form" novalidate style="display:flex;flex-direction:column;gap:28px">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+        <div>
+          <label class="field-label" style="color:rgba(245,241,234,.45)" data-i18n-es="Nombre *" data-i18n-en="First name *">Nombre *</label>
+          <input type="text" name="nombre" required class="field field-dark" placeholder="Su nombre" data-i18n-placeholder-es="Su nombre" data-i18n-placeholder-en="Your name">
+        </div>
+        <div>
+          <label class="field-label" style="color:rgba(245,241,234,.45)" data-i18n-es="Apellido *" data-i18n-en="Last name *">Apellido *</label>
+          <input type="text" name="apellido" required class="field field-dark" placeholder="Su apellido" data-i18n-placeholder-es="Su apellido" data-i18n-placeholder-en="Your surname">
+        </div>
+      </div>
+      <div>
+        <label class="field-label" style="color:rgba(245,241,234,.45)" data-i18n-es="Correo electrónico *" data-i18n-en="Email *">Correo electrónico *</label>
+        <input type="email" name="correo" required class="field field-dark" placeholder="correo@ejemplo.com" data-i18n-placeholder-es="correo@ejemplo.com" data-i18n-placeholder-en="email@example.com">
+      </div>
+      <div>
+        <label class="field-label" style="color:rgba(245,241,234,.45)" data-i18n-es="Teléfono *" data-i18n-en="Phone *">Teléfono *</label>
+        <input type="tel" name="telefono" required class="field field-dark" placeholder="(809) 564-6802">
+      </div>
+      <div>
+        <label class="field-label" style="color:rgba(245,241,234,.45)" data-i18n-es="Proyecto de interés" data-i18n-en="Project of interest">Proyecto de interés</label>
+        <select name="proyecto" class="field field-dark" style="background:transparent;color:var(--on-dark)">
+          <option style="background:var(--dark-2);color:var(--on-dark)" data-i18n-es="Viva Tower II — Santo Domingo" data-i18n-en="Viva Tower II — Santo Domingo">Viva Tower II — Santo Domingo</option>
+          <option style="background:var(--dark-2);color:var(--on-dark)" data-i18n-es="Viva Tower I — Entregado" data-i18n-en="Viva Tower I — Delivered">Viva Tower I — Entregado</option>
+          <option style="background:var(--dark-2);color:var(--on-dark)" data-i18n-es="Proyectos futuros" data-i18n-en="Future projects">Proyectos futuros</option>
+        </select>
+      </div>
+      <div>
+        <label class="field-label" style="color:rgba(245,241,234,.45)" data-i18n-es="Mensaje (opcional)" data-i18n-en="Message (optional)">Mensaje (opcional)</label>
+        <textarea rows="3" name="mensaje" class="field field-dark" placeholder="¿En qué podemos ayudarle?" style="resize:none" data-i18n-placeholder-es="¿En qué podemos ayudarle?" data-i18n-placeholder-en="How can we help?"></textarea>
+      </div>
+      <p id="lead-error" style="display:none;color:#e9a48b;font-size:.82rem;margin:0" data-i18n-es="Por favor complete los campos obligatorios (*)." data-i18n-en="Please complete the required fields (*).">Por favor complete los campos obligatorios (*).</p>
+      <button type="submit" class="btn btn-bronze" style="align-self:flex-start;margin-top:4px" data-i18n-es="Enviar y desbloquear material" data-i18n-en="Submit & unlock material">Enviar y desbloquear material</button>
+      <p style="color:rgba(245,241,234,.32);font-size:.72rem;margin:0;max-width:380px" data-i18n-es="Al enviar acepta ser contactado por Constructora Quezada Vivas SRL. No compartimos sus datos con terceros." data-i18n-en="By submitting you agree to be contacted by Constructora Quezada Vivas SRL. We never share your data with third parties.">Al enviar acepta ser contactado por Constructora Quezada Vivas SRL. No compartimos sus datos con terceros.</p>
+    </form>
+
+    <!-- Unlocked after form submit -->
+    <div id="lead-success" style="display:none">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+        <span style="width:8px;height:8px;background:var(--bronze-lt);border-radius:999px"></span>
+        <span class="eyebrow" style="color:var(--bronze-lt)" data-i18n-es="Material desbloqueado" data-i18n-en="Material unlocked">Material desbloqueado</span>
+      </div>
+      <h3 class="display" style="font-size:clamp(1.8rem,3.2vw,2.6rem);color:var(--on-dark);margin-bottom:16px">
+        <span data-i18n-es="Gracias," data-i18n-en="Thank you,">Gracias,</span> <em id="lead-name" style="color:var(--bronze-lt)"></em>.
+      </h3>
+      <p style="color:rgba(245,241,234,.6);line-height:1.75;font-size:.98rem;max-width:420px;margin-bottom:36px" data-i18n-es="Descargue los documentos a continuación. También enviamos una copia a su correo y nuestro equipo le contactará pronto." data-i18n-en="Download the documents below. We've also sent a copy to your email and our team will be in touch shortly.">
+        Descargue los documentos a continuación. También enviamos una copia a su correo y nuestro equipo le contactará pronto.
+      </p>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <a class="dl-item" href="downloads/Brochure-Constructora-Quezada-Vivas.pdf" download>
+          <span class="dl-meta">
+            <span class="dl-name" data-i18n-es="Brochure corporativo" data-i18n-en="Corporate brochure">Brochure corporativo</span>
+            <span class="dl-sub">PDF</span>
+          </span>
+          <span class="dl-icon" aria-hidden="true">↓</span>
+        </a>
+        <a class="dl-item" href="downloads/Viva-Tower-II-Tipologias.pdf" download>
+          <span class="dl-meta">
+            <span class="dl-name" data-i18n-es="Viva Tower II — Tipologías & planos" data-i18n-en="Viva Tower II — Floor plans">Viva Tower II — Tipologías & planos</span>
+            <span class="dl-sub">PDF</span>
+          </span>
+          <span class="dl-icon" aria-hidden="true">↓</span>
+        </a>
+        <a class="dl-item" href="downloads/Viva-Tower-II-Lista-de-Precios.pdf" download>
+          <span class="dl-meta">
+            <span class="dl-name" data-i18n-es="Lista de precios" data-i18n-en="Price list">Lista de precios</span>
+            <span class="dl-sub">PDF</span>
+          </span>
+          <span class="dl-icon" aria-hidden="true">↓</span>
+        </a>
+      </div>
+      <p style="color:rgba(245,241,234,.32);font-size:.72rem;margin-top:20px" data-i18n-es="¿Algún documento no abre todavía? Lo estamos finalizando y se lo haremos llegar por correo." data-i18n-en="A document not opening yet? We're finalising it and will email it to you.">¿Algún documento no abre todavía? Lo estamos finalizando y se lo haremos llegar por correo.</p>
+    </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════ FOOTER ════════════════ -->
+<footer style="border-top:1px solid var(--line);background:var(--paper)">
+
+  <!-- Variant A: Editorial -->
+  <div class="foot-editorial container" style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:64px;padding:80px max(24px,5vw) 32px">
+    <div>
+      <img class="logo-img" src="assets/logo-quezada-vivas.png" alt="Constructora Quezada Vivas" style="height:64px;width:auto;margin-bottom:24px">
+      <p style="color:var(--ink-soft);line-height:1.75;max-width:300px;font-size:.92rem" data-i18n-es="Desarrollamos residencias contemporáneas en la República Dominicana. Calidad, diseño y compromiso en cada proyecto." data-i18n-en="We develop contemporary residences across the Dominican Republic. Quality, design and commitment in every project.">
+        Desarrollamos residencias contemporáneas en la República Dominicana. Calidad, diseño y compromiso en cada proyecto.
+      </p>
+    </div>
+    <div>
+      <p class="eyebrow" style="color:var(--ink-mute);margin-bottom:18px" data-i18n-es="Proyectos" data-i18n-en="Projects">Proyectos</p>
+      <ul style="display:flex;flex-direction:column;gap:10px;list-style:none;padding:0;margin:0">
+        <li><a href="viva-tower-ii.html" style="color:var(--ink-2);text-decoration:none;font-size:.92rem">Viva Tower II</a></li>
+        <li><a href="viva-tower-i.html" style="color:var(--ink-2);text-decoration:none;font-size:.92rem">Viva Tower I</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="eyebrow" style="color:var(--ink-mute);margin-bottom:18px" data-i18n-es="Empresa" data-i18n-en="Company">Empresa</p>
+      <ul style="display:flex;flex-direction:column;gap:10px;list-style:none;padding:0;margin:0">
+        <li><a href="#nosotros" style="color:var(--ink-2);text-decoration:none;font-size:.92rem" data-i18n-es="Nosotros" data-i18n-en="About">Nosotros</a></li>
+        <li><a href="#equipo" style="color:var(--ink-2);text-decoration:none;font-size:.92rem" data-i18n-es="Equipo" data-i18n-en="Team">Equipo</a></li>
+        <li><a href="#contacto" style="color:var(--ink-2);text-decoration:none;font-size:.92rem" data-i18n-es="Contacto" data-i18n-en="Contact">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="eyebrow" style="color:var(--ink-mute);margin-bottom:18px" data-i18n-es="Contacto" data-i18n-en="Contact">Contacto</p>
+      <p style="color:var(--ink-2);font-size:.92rem;line-height:1.7">
+        (809) 564-6802<br>
+        WhatsApp (829) 302-1658<br>
+        ventas@constructoraquezadavivas.com<br>
+        Av. Luperón #21, Santo Domingo
+      </p>
+    </div>
+    <div style="grid-column:1/-1;border-top:1px solid var(--line);padding-top:24px;display:flex;justify-content:space-between;color:var(--ink-mute);font-size:.82rem;flex-wrap:wrap;gap:12px">
+      <span>© 2026 Constructora Quezada Vivas SRL</span>
+      <span data-i18n-es="Todos los derechos reservados" data-i18n-en="All rights reserved">Todos los derechos reservados</span>
+    </div>
+  </div>
+
+  <!-- Variant B: Minimal -->
+  <div class="foot-minimal container" style="display:none;justify-content:space-between;align-items:center;padding:32px max(24px,5vw);flex-wrap:wrap;gap:16px">
+    <img class="logo-img" src="assets/logo-quezada-vivas.png" alt="Constructora Quezada Vivas" style="height:44px;width:auto">
+    <div style="display:flex;gap:24px;flex-wrap:wrap">
+      <a href="viva-tower-ii.html" style="color:var(--ink-2);text-decoration:none;font-size:.85rem">Viva Tower II</a>
+      <a href="viva-tower-i.html" style="color:var(--ink-2);text-decoration:none;font-size:.85rem">Viva Tower I</a>
+      <a href="#nosotros" style="color:var(--ink-2);text-decoration:none;font-size:.85rem" data-i18n-es="Nosotros" data-i18n-en="About">Nosotros</a>
+      <a href="#contacto" style="color:var(--ink-2);text-decoration:none;font-size:.85rem" data-i18n-es="Contacto" data-i18n-en="Contact">Contacto</a>
+    </div>
+    <span style="color:var(--ink-mute);font-size:.78rem">© 2026 Constructora QV SRL</span>
+  </div>
+
+  <!-- Variant C: Statement -->
+  <div class="foot-statement" style="display:none;padding:96px max(24px,5vw) 48px;text-align:center">
+    <div class="container">
+      <p class="eyebrow" style="margin-bottom:32px">Constructora Quezada Vivas SRL</p>
+      <p class="display" style="font-size:clamp(2.5rem,7vw,6rem);max-width:1100px;margin:0 auto" data-i18n-es="Construimos para que las familias vivan." data-i18n-en="We build so families can live.">
+        <em data-i18n-es="Construimos" data-i18n-en="We build">Construimos</em> <span data-i18n-es="para que las" data-i18n-en="so families">para que las</span><br><span data-i18n-es="familias vivan." data-i18n-en="can live.">familias vivan.</span>
+      </p>
+      <div style="margin-top:64px;display:flex;justify-content:center;gap:32px;flex-wrap:wrap;color:var(--ink-mute);font-size:.85rem">
+        <span>(809) 564-6802</span>
+        <span>WhatsApp (829) 302-1658</span>
+        <span>ventas@constructoraquezadavivas.com</span>
+        <span>Av. Luperón #21, Santo Domingo</span>
+      </div>
+      <div style="margin-top:48px;padding-top:24px;border-top:1px solid var(--line);color:var(--ink-mute);font-size:.78rem">© 2026 Constructora Quezada Vivas SRL</div>
+    </div>
+  </div>
+
+</footer>
+
+<script src="assets/site.js"></script>
+
+</body>
+</html>
