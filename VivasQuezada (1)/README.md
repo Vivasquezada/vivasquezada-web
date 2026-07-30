@@ -8,19 +8,14 @@ Sitio web institucional + página de proyecto Viva Tower II.
 - `viva-tower-ii.html` — Proyecto Viva Tower II
 - `viva-tower-i.html` — Proyecto Viva Tower I (entregado, en construcción de contenido)
 - `assets/site.css` — Sistema de diseño (paletas, tipografía, componentes)
-- `assets/site.js` — Comportamiento (nav, scroll reveal, panel de Tweaks, i18n)
+- `assets/site.js` — Comportamiento (nav, scroll reveal, i18n)
 - `brand_assets/` — Logo y renders del proyecto
 
-## Tweaks panel
+## Configuración de diseño
 
-Click en el botón ⚙ en la esquina inferior derecha para cambiar:
-- Idioma (ES / EN)
-- Tema (claro / oscuro)
-- Paleta de color
-- Diseño del hero / nav / footer / teaser de proyectos
-- Animaciones
-
-Los cambios se guardan automáticamente en `localStorage`.
+El tema, paleta, layout de hero/nav/footer/teaser e idioma por defecto están fijados en
+`TWEAK_DEFAULTS` al inicio de `assets/site.js`. Editar ese objeto y volver a publicar
+para cambiar el diseño — ya no hay panel visible en el sitio en vivo.
 
 ## Deploy
 
